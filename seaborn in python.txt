@@ -1,0 +1,20 @@
+import seaborn as sns 
+
+titanic = sns.load_dataset('titanic')
+
+titanic.head()
+
+titanic.shape
+
+sns.countplot(x="class",data=titanic)
+
+sns.countplot(x='class',hue='who',data=titanic)  # x will print in horizontal way
+
+sns.countplot(y='class',hue='who',data=titanic)  # y will print in vertical way
+
+titanic = sns.load_dataset('titanic')
+corr=titanic.corr()  # corelation is present between the negative one to postive one the negative one means the one variable will increase the other variable will decrease and postive one means the one variable will increase so other variable will also increase 
+
+sns.heatmap(corr, annot=True)
+
+sns.countplot(x='class',data=titanic,palette='Blues')
